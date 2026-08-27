@@ -62,8 +62,8 @@ const publications = [
     year: '2018',
     note: 'Conference paper',
     title: 'NVMTFS: A Non-Volatile Memory Adaptive File System for Tiered Storage System',
-    image: '/papers/nvmtfs-official.png',
-    imageAlt: 'Official IEEE Computer Society page for the NVMTFS paper',
+    image: '/papers/nvmtfs-system-layout.png',
+    imageAlt: 'NVMTFS file-system layout across NVM, tier-one, and tier-two storage spaces',
     authors: 'Shiyong Liu, Zhichao Cao, Zhongwen Guo, Guohua Wang, Xupeng Wang, Zhijin Qiu, Xukun Qin',
     description:
       'An adaptive file-system design for coordinating non-volatile memory with tiered storage infrastructure.',
