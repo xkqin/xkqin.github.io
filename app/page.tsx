@@ -247,10 +247,6 @@ export default function Home() {
       <div className="page-shell" id="top">
         <section className="hero" id="about">
           <div className="hero-copy">
-            <div className="institution-lockup" aria-label="Primary affiliation">
-              <span>上海人工智能实验室</span>
-              <strong>Shanghai AI Laboratory</strong>
-            </div>
             <p className="eyebrow">Embodied AI · Active Perception · Autonomous Camera Agents</p>
             <h1>Xukun Qin</h1>
             <p className="role-line">
