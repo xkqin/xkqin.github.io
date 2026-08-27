@@ -76,8 +76,8 @@ const publications = [
     year: '2018',
     note: 'Conference paper',
     title: 'The Read Amplification Analysis of NoSQL Database on Top of OSDs: A Case Study of HBase',
-    image: '/papers/hbase-osd-official.png',
-    imageAlt: 'Official IEEE Computer Society page for the HBase on OSDs paper',
+    image: '/papers/hbase-osd-agent.png',
+    imageAlt: 'Local Storage Scanner architecture for the HBase OSD Agent',
     authors: 'Shiyong Liu, Zhongwen Guo, Chen Liu, Xupeng Wang, Guohua Wang, Zhijin Qiu, Xukun Qin',
     description:
       'A systems study examining read amplification when HBase is deployed on object-based storage devices.',
