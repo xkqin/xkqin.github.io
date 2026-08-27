@@ -7,7 +7,7 @@ const news = [
   {
     date: '2026.03',
     label: 'Research',
-    title: 'Started as a Research Intern and Joint PhD Trainee at Shanghai AI Laboratory.',
+    title: 'Started doctoral research training at Shanghai AI Laboratory.',
   },
   {
     date: '2026',
@@ -17,7 +17,7 @@ const news = [
   {
     date: '2024.09',
     label: 'Education',
-    title: 'Started joint PhD training between Ocean University of China and Shanghai AI Laboratory.',
+    title: 'Started Ph.D. studies at Ocean University of China.',
   },
   {
     date: '2024.01',
@@ -48,8 +48,8 @@ const publications = [
     year: '2019',
     note: 'Journal article',
     title: 'Inpainting of Remote Sensing SST Images With Deep Convolutional Generative Adversarial Network',
-    image: '/papers/remote-sensing-sst.png',
-    imageAlt: 'Remote sensing SST image inpainting method preview',
+    image: '/papers/remote-sensing-sst-official.png',
+    imageAlt: 'Official IEEE Xplore page for the remote sensing SST image inpainting paper',
     authors: 'Junyu Dong, Ruiying Yin, Xin Sun, Qiong Li, Yuting Yang, Xukun Qin',
     description:
       'A generative approach for recovering missing regions in sea-surface-temperature remote-sensing imagery.',
@@ -62,8 +62,8 @@ const publications = [
     year: '2018',
     note: 'Conference paper',
     title: 'NVMTFS: A Non-Volatile Memory Adaptive File System for Tiered Storage System',
-    image: '/papers/nvmtfs.png',
-    imageAlt: 'NVMTFS tiered storage system architecture preview',
+    image: '/papers/nvmtfs-official.png',
+    imageAlt: 'Official IEEE Computer Society page for the NVMTFS paper',
     authors: 'Shiyong Liu, Zhichao Cao, Zhongwen Guo, Guohua Wang, Xupeng Wang, Zhijin Qiu, Xukun Qin',
     description:
       'An adaptive file-system design for coordinating non-volatile memory with tiered storage infrastructure.',
@@ -76,8 +76,8 @@ const publications = [
     year: '2018',
     note: 'Conference paper',
     title: 'The Read Amplification Analysis of NoSQL Database on Top of OSDs: A Case Study of HBase',
-    image: '/papers/hbase-osd.png',
-    imageAlt: 'HBase on object storage devices paper preview',
+    image: '/papers/hbase-osd-official.png',
+    imageAlt: 'Official IEEE Computer Society page for the HBase on OSDs paper',
     authors: 'Shiyong Liu, Zhongwen Guo, Chen Liu, Xupeng Wang, Guohua Wang, Zhijin Qiu, Xukun Qin',
     description:
       'A systems study examining read amplification when HBase is deployed on object-based storage devices.',
@@ -136,7 +136,7 @@ const projects = [
 const experience = [
   {
     period: 'Mar 2026 – Present',
-    role: 'Research Intern / Joint PhD Trainee',
+    role: 'Research Intern / Doctoral Researcher',
     organization: 'Shanghai Artificial Intelligence Laboratory',
     detail:
       'VLA camera-control policies, game-environment trajectory datasets, cross-environment evaluation, and World Action Models for long-horizon viewpoint planning.',
@@ -167,9 +167,10 @@ const experience = [
 const education = [
   {
     period: 'Sep 2024 – Present',
-    degree: 'Joint PhD Training',
-    school: 'Shanghai AI Laboratory · Ocean University of China',
-    detail: 'World-Action-Model-Driven UAV Vision-Language Navigation and Embodied Active Perception.',
+    degree: 'Ph.D. in Computer Science',
+    school: 'Ocean University of China',
+    detail:
+      'Research training at Shanghai AI Laboratory · World-Action-Model-Driven UAV Vision-Language Navigation and Embodied Active Perception.',
   },
   {
     period: 'May 2023 – Aug 2024',
@@ -242,7 +243,7 @@ export default function Home() {
             <p className="eyebrow">Embodied AI · Active Perception · Autonomous Camera Agents</p>
             <h1>Xukun Qin</h1>
             <p className="role-line">
-              Ph.D. Student at Ocean University of China · Joint PhD Trainee at
+              Ph.D. Student at Ocean University of China · Researcher at
               Shanghai AI Laboratory
             </p>
             <p className="intro">
