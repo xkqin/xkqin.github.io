@@ -230,6 +230,7 @@ export default function Home() {
         </a>
         <nav aria-label="Primary navigation">
           <a href="#about">About</a>
+          <a href="#ai-lab">AI Lab</a>
           <a href="#news">Recent</a>
           <a href="#papers">Papers</a>
           <a href="#work">Work</a>
@@ -289,6 +290,40 @@ export default function Home() {
               </div>
             </div>
           </aside>
+        </section>
+
+        <section className="section lab-training-section" id="ai-lab">
+          <div className="section-heading">
+            <p>Shanghai AI Laboratory</p>
+            <h2>Research training</h2>
+            <p className="section-summary">
+              Doctoral research at the intersection of embodied intelligence,
+              world modeling, and active perception.
+            </p>
+          </div>
+          <article className="lab-training-card">
+            <div className="lab-training-meta">
+              <span>Mar 2026 – Present</span>
+              <small>Research Intern · Doctoral Researcher</small>
+            </div>
+            <p className="lab-name">上海人工智能实验室 · Shanghai AI Laboratory</p>
+            <h3>World-Action Models for Embodied Active Perception</h3>
+            <p>
+              Research training focused on connecting perception, predictive
+              world representations, and action for long-horizon camera and
+              viewpoint planning. Current work spans VLA camera-control
+              policies, game-environment trajectory datasets, cross-environment
+              evaluation, and world-action-model-driven UAV vision-language
+              navigation.
+            </p>
+            <div className="project-tags" aria-label="Shanghai AI Lab research topics">
+              <span>World Action Models</span>
+              <span>VLA Camera Control</span>
+              <span>UAV VLN</span>
+              <span>Embodied Active Perception</span>
+              <span>Viewpoint Planning</span>
+            </div>
+          </article>
         </section>
 
         <section className="section" id="news">

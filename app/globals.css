@@ -295,6 +295,84 @@ footer a:hover {
   align-self: start;
 }
 
+.lab-training-section {
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+
+.lab-training-card {
+  position: relative;
+  padding: clamp(30px, 5vw, 48px);
+  overflow: hidden;
+  border: 1px solid #bed2da;
+  background: linear-gradient(135deg, #f8fbfc 0%, #eaf2f5 100%);
+}
+
+.lab-training-card::after {
+  position: absolute;
+  right: -42px;
+  bottom: -90px;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgb(40 88 106 / 12%);
+  border-radius: 50%;
+  content: "";
+}
+
+.lab-training-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #c8d8de;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lab-training-meta small {
+  color: var(--muted);
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.lab-name {
+  margin: 30px 0 10px;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lab-training-card h3 {
+  max-width: 680px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vw, 3.15rem);
+  font-weight: 550;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.lab-training-card > p:last-of-type {
+  position: relative;
+  z-index: 1;
+  max-width: 710px;
+  margin: 22px 0 0;
+  color: #4b5b63;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.lab-training-card .project-tags {
+  position: relative;
+  z-index: 1;
+  margin-top: 28px;
+}
+
 .news-list {
   border-top: 1px solid var(--ink);
 }
@@ -712,6 +790,12 @@ footer p {
 
   .news-item,
   .timeline-item {
+    gap: 8px;
+  }
+
+  .lab-training-meta {
+    align-items: flex-start;
+    flex-direction: column;
     gap: 8px;
   }
 
