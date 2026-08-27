@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://xukun-qin-research.mnwyojpcirbof.chatgpt.site'),
   title: 'Xukun Qin · Embodied AI Researcher',
   description:
     'Academic homepage of Xukun Qin, researching embodied AI, active perception, UAV vision-language navigation, and autonomous camera agents.',
