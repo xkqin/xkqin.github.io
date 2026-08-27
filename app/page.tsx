@@ -48,8 +48,8 @@ const publications = [
     year: '2019',
     note: 'Journal article',
     title: 'Inpainting of Remote Sensing SST Images With Deep Convolutional Generative Adversarial Network',
-    image: '/papers/remote-sensing-sst-official.png',
-    imageAlt: 'Official IEEE Xplore page for the remote sensing SST image inpainting paper',
+    image: '/papers/remote-sensing-sst-network.jpg',
+    imageAlt: 'Generator and discriminator network architecture for remote sensing SST image inpainting',
     authors: 'Junyu Dong, Ruiying Yin, Xin Sun, Qiong Li, Yuting Yang, Xukun Qin',
     description:
       'A generative approach for recovering missing regions in sea-surface-temperature remote-sensing imagery.',
