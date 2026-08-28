@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
 :root {
-  --ink: #162127;
-  --muted: #66747c;
-  --line: #dfe6e8;
-  --accent: #315b72;
-  --accent-deep: #24495c;
-  --accent-soft: #eaf1f4;
-  --paper: #f7f8f7;
+  --ink: #1b252b;
+  --muted: #68767c;
+  --line: #e1e6e7;
+  --accent: #345c70;
+  --accent-deep: #284b5c;
+  --accent-soft: #edf2f4;
+  --paper: #fafafa;
   --white: #ffffff;
 }
 
@@ -21,9 +21,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 88% 8%, rgb(49 91 114 / 7%), transparent 24rem),
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -48,11 +46,11 @@ a {
   align-items: center;
   justify-content: space-between;
   width: min(1120px, calc(100% - 40px));
-  min-height: 74px;
+  min-height: 68px;
   margin: 0 auto;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 86%, transparent);
-  background: color-mix(in srgb, var(--paper) 90%, transparent);
-  backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 .wordmark {
@@ -94,11 +92,11 @@ footer a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.75fr);
-  gap: clamp(48px, 8vw, 110px);
+  grid-template-columns: minmax(0, 1.75fr) minmax(260px, 0.7fr);
+  gap: clamp(48px, 7vw, 88px);
   align-items: end;
-  min-height: 570px;
-  padding: 104px 0 88px;
+  min-height: 510px;
+  padding: 82px 0 72px;
   border-bottom: 1px solid var(--line);
   scroll-margin-top: 74px;
 }
@@ -116,17 +114,17 @@ footer a:hover {
 
 .hero h1 {
   max-width: 760px;
-  margin: 16px 0 18px;
+  margin: 14px 0 16px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4.4rem, 9.5vw, 8.5rem);
+  font-size: clamp(4.2rem, 8.5vw, 7.5rem);
   font-weight: 500;
   letter-spacing: -0.075em;
-  line-height: 0.86;
+  line-height: 0.9;
 }
 
 .role-line {
   max-width: 720px;
-  margin: 0 0 34px;
+  margin: 0 0 28px;
   color: var(--accent);
   font-size: clamp(0.94rem, 1.8vw, 1.08rem);
   font-weight: 650;
@@ -137,8 +135,8 @@ footer a:hover {
   margin: 0;
   color: #425159;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.16rem, 2.1vw, 1.45rem);
-  line-height: 1.65;
+  font-size: clamp(1.12rem, 1.8vw, 1.35rem);
+  line-height: 1.6;
 }
 
 .intro strong {
@@ -149,54 +147,34 @@ footer a:hover {
 .hero-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
-  margin-top: 34px;
+  gap: 20px;
+  margin-top: 28px;
   color: var(--accent);
   font-size: 0.84rem;
   font-weight: 750;
 }
 
 .research-note {
-  position: relative;
-  overflow: hidden;
-  padding: 28px;
-  border: 1px solid #d7e2e6;
-  border-radius: 3px;
-  background: var(--accent-soft);
-}
-
-.research-note::after {
-  position: absolute;
-  right: -56px;
-  bottom: -56px;
-  width: 150px;
-  height: 150px;
-  border: 1px solid rgb(49 91 114 / 18%);
-  border-radius: 50%;
-  box-shadow: 0 0 0 28px rgb(49 91 114 / 4%), 0 0 0 56px rgb(49 91 114 / 3%);
-  content: '';
+  padding: 24px 0 0;
+  border-top: 2px solid var(--accent);
 }
 
 .research-note > p {
-  position: relative;
-  z-index: 1;
-  margin: 20px 0 26px;
+  margin: 16px 0 22px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.18rem;
-  line-height: 1.55;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .focus-tags {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
 .focus-tags span {
-  padding: 5px 9px;
-  border: 1px solid #c8d8de;
+  padding: 5px 8px;
+  background: var(--accent-soft);
   color: #456576;
   font-size: 0.66rem;
   font-weight: 700;
@@ -205,14 +183,12 @@ footer a:hover {
 }
 
 .note-stats {
-  position: relative;
-  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 34px;
-  padding-top: 20px;
-  border-top: 1px solid #cbdbe1;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
 }
 
 .note-stats div {
@@ -222,7 +198,7 @@ footer a:hover {
 
 .note-stats strong {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -236,8 +212,8 @@ footer a:hover {
 .section {
   display: grid;
   grid-template-columns: minmax(180px, 0.55fr) minmax(0, 1.8fr);
-  gap: clamp(46px, 8vw, 120px);
-  padding: 96px 0;
+  gap: clamp(44px, 7vw, 92px);
+  padding: 82px 0;
   border-bottom: 1px solid var(--line);
   scroll-margin-top: 72px;
 }
@@ -245,7 +221,7 @@ footer a:hover {
 .section-heading h2 {
   margin: 10px 0 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
   font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 1.05;
@@ -253,7 +229,7 @@ footer a:hover {
 
 .section-summary {
   max-width: 260px;
-  margin: 24px 0 0;
+  margin: 20px 0 0;
   color: var(--muted);
   font-size: 0.84rem;
   line-height: 1.65;
@@ -273,7 +249,7 @@ footer a:hover {
   display: grid;
   grid-template-columns: 112px 1fr;
   gap: 24px;
-  padding: 24px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -311,28 +287,29 @@ footer a:hover {
 .project-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+}
+
+.paper-list,
+.project-list {
+  border-top: 1px solid var(--ink);
 }
 
 .paper-card {
   display: grid;
   grid-template-columns: 230px 1fr;
-  gap: 34px;
-  padding: 30px;
-  border: 1px solid var(--line);
-  background: rgb(255 255 255 / 68%);
-  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+  gap: 30px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  transition: opacity 160ms ease;
 }
 
 .paper-card:hover {
-  transform: translateY(-2px);
-  border-color: #bdcdd3;
-  background: var(--white);
+  opacity: 0.88;
 }
 
 .paper-card.featured {
-  border-color: #c4d6dd;
-  background: linear-gradient(135deg, #f8fbfc 0%, #edf4f6 100%);
+  background: transparent;
 }
 
 .paper-visual {
@@ -346,7 +323,7 @@ footer a:hover {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #dbe4e7;
   background: white;
   object-fit: contain;
@@ -367,7 +344,7 @@ footer a:hover {
 }
 
 .paper-venue span {
-  padding: 6px 10px;
+  padding: 5px 8px;
   background: var(--accent);
   color: white;
   font-size: 0.68rem;
@@ -421,12 +398,12 @@ footer a:hover {
 }
 
 .project-card {
-  padding: 32px 0;
-  border-top: 1px solid var(--ink);
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .project-card:last-child {
-  border-bottom: 1px solid var(--line);
+  border-bottom-color: var(--line);
 }
 
 .project-topline {
@@ -450,8 +427,8 @@ footer a:hover {
 }
 
 .project-card h3 {
-  margin-top: 18px;
-  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  margin-top: 16px;
+  font-size: clamp(1.5rem, 2.6vw, 2.15rem);
   letter-spacing: -0.025em;
 }
 
@@ -467,7 +444,7 @@ footer a:hover {
   justify-content: space-between;
   align-items: flex-end;
   gap: 28px;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .project-tags {
@@ -478,7 +455,7 @@ footer a:hover {
 
 .project-tags span {
   padding: 5px 8px;
-  border: 1px solid var(--line);
+  background: var(--accent-soft);
   color: #5a6a72;
   font-size: 0.65rem;
   font-weight: 650;
@@ -501,7 +478,7 @@ footer a:hover {
   display: grid;
   grid-template-columns: 168px 1fr;
   gap: 24px;
-  padding: 28px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -538,8 +515,8 @@ footer a:hover {
 .skills-section {
   display: grid;
   grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.8fr);
-  gap: clamp(46px, 8vw, 120px);
-  padding: 72px 0;
+  gap: clamp(44px, 7vw, 92px);
+  padding: 64px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -559,9 +536,8 @@ footer a:hover {
 }
 
 .skills-list span {
-  padding: 8px 11px;
-  border: 1px solid #d4dfe3;
-  background: rgb(255 255 255 / 55%);
+  padding: 7px 10px;
+  background: var(--accent-soft);
   color: #53666f;
   font-size: 0.7rem;
   font-weight: 700;
@@ -572,7 +548,7 @@ footer a:hover {
   grid-template-columns: 0.45fr 1.5fr auto;
   gap: clamp(30px, 6vw, 80px);
   align-items: start;
-  padding: 100px 0;
+  padding: 82px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -580,7 +556,7 @@ footer a:hover {
   max-width: 640px;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 1.02;
@@ -611,7 +587,7 @@ footer {
   grid-template-columns: auto 1fr auto;
   gap: 24px;
   align-items: center;
-  min-height: 110px;
+  min-height: 92px;
   color: var(--muted);
   font-size: 0.72rem;
 }
@@ -653,18 +629,19 @@ footer p {
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding: 76px 0 62px;
+    gap: 36px;
+    padding: 56px 0 50px;
   }
 
   .hero h1 {
-    font-size: clamp(4rem, 22vw, 6.4rem);
+    font-size: clamp(3.6rem, 18vw, 4.8rem);
   }
 
   .section,
   .skills-section {
     grid-template-columns: 1fr;
     gap: 32px;
-    padding: 72px 0;
+    padding: 64px 0;
   }
 
   .sticky-heading {
@@ -719,7 +696,7 @@ footer p {
 
   .paper-card,
   .research-note {
-    padding: 24px;
+    padding: 22px 0;
   }
 
   .hero-links {
