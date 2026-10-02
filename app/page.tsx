@@ -2,17 +2,17 @@ const news = [
   {
     date: '2026.07',
     label: 'Publication',
-    title: 'DefectSynth published in IEEE Transactions on Automation Science and Engineering.',
+    title: 'DefectSynth published in IEEE T-ASE.',
   },
   {
     date: '2026.03',
     label: 'Research',
-    title: 'Started doctoral research training at Shanghai AI Laboratory.',
+    title: 'Joined Shanghai AI Laboratory for doctoral research.',
   },
   {
     date: '2026',
     label: 'Open source',
-    title: 'Game Camera Capture Lab released as a reproducible foundation for embodied camera research.',
+    title: 'Released Game Camera Capture Lab.',
   },
   {
     date: '2024.09',
@@ -22,7 +22,7 @@ const news = [
   {
     date: '2024.01',
     label: 'Security',
-    title: 'Acknowledged by Riipen for responsible disclosure after a web security assessment.',
+    title: 'Riipen responsible disclosure acknowledgment.',
   },
 ];
 
@@ -30,13 +30,10 @@ const publications = [
   {
     venue: 'IEEE T-ASE',
     year: '2026',
-    note: 'Journal article',
     title: 'DefectSynth: Few-Shot Defective Image Generation by Modeling Shape and Appearance',
     image: '/papers/defectsynth.png',
     imageAlt: 'DefectSynth method and synthesized defect examples',
     authors: 'Dexu Zhao, Xukun Qin, Xinghui Dong',
-    description:
-      'A few-shot generation framework that models defect shape and appearance to synthesize diverse, controllable industrial defects.',
     links: [
       { label: 'Paper', href: 'https://doi.org/10.1109/TASE.2026.3697519' },
       { label: 'Code', href: 'https://github.com/INDTLab/DefectSynth' },
@@ -46,13 +43,10 @@ const publications = [
   {
     venue: 'IEEE GRSL',
     year: '2019',
-    note: 'Journal article',
     title: 'Inpainting of Remote Sensing SST Images With Deep Convolutional Generative Adversarial Network',
     image: '/papers/remote-sensing-sst-network.jpg',
     imageAlt: 'Generator and discriminator network architecture for remote sensing SST image inpainting',
     authors: 'Junyu Dong, Ruiying Yin, Xin Sun, Qiong Li, Yuting Yang, Xukun Qin',
-    description:
-      'A generative approach for recovering missing regions in sea-surface-temperature remote-sensing imagery.',
     links: [
       { label: 'Paper', href: 'https://doi.org/10.1109/LGRS.2018.2870880' },
     ],
@@ -60,13 +54,10 @@ const publications = [
   {
     venue: 'IEEE BigCom',
     year: '2018',
-    note: 'Conference paper',
     title: 'NVMTFS: A Non-Volatile Memory Adaptive File System for Tiered Storage System',
     image: '/papers/nvmtfs-system-layout.png',
     imageAlt: 'NVMTFS file-system layout across NVM, tier-one, and tier-two storage spaces',
     authors: 'Shiyong Liu, Zhichao Cao, Zhongwen Guo, Guohua Wang, Xupeng Wang, Zhijin Qiu, Xukun Qin',
-    description:
-      'An adaptive file-system design for coordinating non-volatile memory with tiered storage infrastructure.',
     links: [
       { label: 'Paper', href: 'https://doi.org/10.1109/BIGCOM.2018.00039' },
     ],
@@ -74,13 +65,10 @@ const publications = [
   {
     venue: 'IEEE BigCom',
     year: '2018',
-    note: 'Conference paper',
     title: 'The Read Amplification Analysis of NoSQL Database on Top of OSDs: A Case Study of HBase',
     image: '/papers/hbase-osd-agent.png',
     imageAlt: 'Local Storage Scanner architecture for the HBase OSD Agent',
     authors: 'Shiyong Liu, Zhongwen Guo, Chen Liu, Xupeng Wang, Guohua Wang, Zhijin Qiu, Xukun Qin',
-    description:
-      'A systems study examining read amplification when HBase is deployed on object-based storage devices.',
     links: [
       { label: 'Paper', href: 'https://doi.org/10.1109/BIGCOM.2018.00040' },
     ],
@@ -93,7 +81,7 @@ const projects = [
     type: 'Research direction',
     title: 'Embodied Aesthetic Photography',
     description:
-      'An embodied camera policy that selects useful, feasible, and visually intentional viewpoints by reasoning about visibility, geometry, collision safety, motion quality, and composition.',
+      'VLA policies for viewpoint planning and visual composition.',
     tags: ['Vision–Language–Action', 'Camera policy', 'Trajectory planning'],
   },
   {
@@ -101,7 +89,7 @@ const projects = [
     type: 'Open-source system',
     title: 'Game Camera Capture Lab',
     description:
-      'A reproducible capture infrastructure for camera poses, point sets, still scans, and trajectories across RE9, KCD2, and Black Myth: Wukong.',
+      'Camera poses and trajectories across RE9, KCD2, and Black Myth: Wukong.',
     tags: ['Multi-game adapters', 'Pose logging', 'Dataset tooling'],
     href: 'https://github.com/xkqin/GameCameraCaptureLab',
   },
@@ -110,7 +98,7 @@ const projects = [
     type: 'Doctoral research',
     title: 'World-Action Models for UAV VLN',
     description:
-      'Connecting predictive world representations with language-conditioned navigation so aerial agents can actively choose where to move, observe, and gather evidence.',
+      'World models for language-guided aerial navigation.',
     tags: ['World action models', 'UAV VLN', 'Active perception'],
   },
   {
@@ -118,7 +106,7 @@ const projects = [
     type: 'Security project',
     title: 'Riipen Website Security Assessment',
     description:
-      'A responsible web security assessment covering reconnaissance, validation, and post-analysis of an AWS S3-backed file-sharing workflow.',
+      'Web security assessment and responsible disclosure.',
     tags: ['AWS S3', 'Burp Suite', 'Nmap'],
     href: 'https://github.com/xkqin/riipen-website-penetration-testing',
   },
@@ -127,7 +115,7 @@ const projects = [
     type: 'Machine learning project',
     title: 'Drug Review Rating Prediction',
     description:
-      'Sentiment and supervised-learning models for predicting drug ratings from patient-written reviews using normalized text and engineered features.',
+      'Predicting drug ratings from patient reviews.',
     tags: ['Python', 'TensorFlow', 'Sentiment analysis'],
     href: 'https://github.com/xkqin/CSE_258',
   },
@@ -139,28 +127,28 @@ const experience = [
     role: 'Research Intern / Doctoral Researcher',
     organization: 'Shanghai Artificial Intelligence Laboratory',
     detail:
-      'VLA camera-control policies, game-environment trajectory datasets, cross-environment evaluation, and World Action Models for long-horizon viewpoint planning.',
+      'Embodied AI · VLA / VLN · World models',
   },
   {
     period: 'Sep 2020 – Mar 2021',
     role: 'Teaching Assistant',
     organization: 'University of California San Diego',
     detail:
-      'Supported CSE 232B through database assignment refinement, graduate student discussions, office hours, and debugging assistance.',
+      'CSE 232B · Database Systems',
   },
   {
     period: 'Jan 2018 – May 2019',
     role: 'Research Assistant',
     organization: 'University of Minnesota Twin Cities',
     detail:
-      'Intelligent storage systems, machine-learning-based indexing, and key-value search for Kinetic drive storage.',
+      'Intelligent storage · Learned indexing',
   },
   {
     period: 'Jun 2017 – Aug 2017',
     role: 'Software Engineer Intern',
     organization: 'Alibaba Group',
     detail:
-      'Personalized recommendation, AI-assisted data categorization, MySQL workflows, and front-end development.',
+      'Recommendation systems · Data categorization',
   },
 ];
 
@@ -170,14 +158,14 @@ const education = [
     degree: 'Research Training',
     school: 'Shanghai AI Laboratory',
     detail:
-      'World Action Models, VLA camera control, UAV vision-language navigation, and embodied active perception.',
+      'Embodied intelligence · World models',
   },
   {
     period: 'Sep 2024 – Present',
     degree: 'Ph.D. in Computer Science',
     school: 'Ocean University of China',
     detail:
-      'World-Action-Model-Driven UAV Vision-Language Navigation and Embodied Active Perception.',
+      'UAV vision-language navigation',
   },
   {
     period: 'May 2023 – Aug 2024',
@@ -189,7 +177,7 @@ const education = [
     period: 'Sep 2022 – Jul 2023',
     degree: 'Doctoral Studies in Computer Science',
     school: 'McGill University',
-    detail: 'Doctoral-level research on UAV route planning and autonomous navigation.',
+    detail: 'UAV planning · Autonomous navigation',
   },
   {
     period: 'Sep 2019 – Jun 2021',
@@ -231,76 +219,62 @@ function ExternalLink({ href, children }: { href: string; children: React.ReactN
 export default function Home() {
   return (
     <main>
+      <a className="skip-link" href="#about">Skip to content</a>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Xukun Qin, back to top">
-          Xukun Qin
+          <span className="monogram" aria-hidden="true">XQ</span>
+          <span>Xukun Qin / Research</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#news">Recent</a>
           <a href="#papers">Papers</a>
           <a href="#work">Work</a>
-          <a href="#education">Edu</a>
+          <a href="#experience">About</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
 
-      <div className="page-shell" id="top">
-        <section className="hero" id="about">
+        <section className="hero" id="top" aria-labelledby="profile-name">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="hero-image" src="/research-paper-background.webp" alt="" aria-hidden="true" width="1200" height="630" fetchPriority="high" />
           <div className="hero-copy">
-            <p className="eyebrow">Embodied AI · Active Perception · Autonomous Camera Agents</p>
-            <h1>Xukun Qin</h1>
+            <p className="eyebrow">SHANGHAI AI LABORATORY</p>
+            <h1 id="profile-name">Xukun Qin</h1>
+            <p className="hero-tagline">Embodied AI · VLA / VLN · World Models</p>
             <p className="role-line">
-              Researcher at Shanghai AI Laboratory · Ph.D. Student at Ocean
-              University of China
-            </p>
-            <p className="intro">
-              I study world-action-model-driven UAV vision-language navigation
-              and embodied active perception. My work asks how an intelligent
-              agent can decide <strong>where to look</strong>,{' '}
-              <strong>how to move</strong>, and <strong>what to capture next</strong>.
+              Ph.D. Student, Ocean University of China
             </p>
             <div className="hero-links" aria-label="Profile links">
               <a href="mailto:xukunqinwork@gmail.com">Email</a>
               <ExternalLink href="https://github.com/xkqin">GitHub</ExternalLink>
-              <ExternalLink href="https://www.linkedin.com/in/xukun-qin">LinkedIn</ExternalLink>
               <ExternalLink href="https://dblp.org/pid/229/7799">DBLP</ExternalLink>
-              <ExternalLink href="https://github.com/xkqin/GameCameraCaptureLab">
-                Camera Lab
-              </ExternalLink>
+              <a href="#work">Research systems</a>
             </div>
           </div>
+        </section>
 
-          <aside className="research-note" aria-label="Current research focus">
-            <span className="note-index">01 / CURRENT FOCUS</span>
-            <p>
-              Building agents that connect perception, world modeling, and
-              action for autonomous viewpoint planning.
-            </p>
-            <div className="focus-tags">
-              <span>World Action Models</span>
-              <span>UAV VLN</span>
-              <span>Viewpoint Planning</span>
-            </div>
-            <div className="note-stats" aria-label="Academic profile summary">
-              <div>
-                <strong>04</strong>
-                <small>selected works</small>
-              </div>
-              <div>
-                <strong>03</strong>
-                <small>research threads</small>
-              </div>
-            </div>
+      <div className="page-shell">
+        <section className="about-band" id="about" aria-label="Research introduction">
+          <p className="intro">
+            My research focuses on <strong>embodied intelligence</strong>,
+            particularly <strong>vision-language-action (VLA)</strong> models,{' '}
+            <strong>vision-language navigation (VLN)</strong>, and{' '}
+            <strong>world models</strong> for perception, planning, and control.
+          </p>
+          <aside className="affiliation">
+            <p className="eyebrow">CURRENTLY AT</p>
+            <strong>Shanghai AI Laboratory</strong>
+            <span>Doctoral research training</span>
+            <span>Since March 2026</span>
           </aside>
         </section>
 
         <section className="section" id="news">
           <div className="section-heading">
-            <p>Recent</p>
-            <h2>News</h2>
+            <p>01 / UPDATES</p>
+            <h2>News.</h2>
           </div>
           <div className="news-list">
-            {news.map((item) => (
+            {news.slice(0, 3).map((item) => (
               <article className="news-item" key={`${item.date}-${item.title}`}>
                 <time>{item.date}</time>
                 <div>
@@ -309,25 +283,31 @@ export default function Home() {
                 </div>
               </article>
             ))}
+            <details className="news-archive">
+              <summary>Earlier updates</summary>
+              {news.slice(3).map((item) => (
+                <article className="news-item" key={item.date}>
+                  <time>{item.date}</time>
+                  <div><span className="news-label">{item.label}</span><h3>{item.title}</h3></div>
+                </article>
+              ))}
+            </details>
           </div>
         </section>
 
         <section className="section" id="papers">
           <div className="section-heading sticky-heading">
-            <p>Research</p>
-            <h2>Selected publications</h2>
-            <p className="section-summary">
-              Work spanning embodied decision-making, generative modeling,
-              remote sensing, and systems research.
-            </p>
+            <p>02 / PUBLICATIONS</p>
+            <h2>Publications.</h2>
           </div>
           <div className="paper-list">
-            {publications.map((paper, index) => (
+            {publications.map((paper) => (
               <article
                 className={`paper-card${paper.featured ? ' featured' : ''}`}
                 key={paper.title}
               >
                 <div className="paper-visual">
+                  <a href={paper.links[0].href} target="_blank" rel="noreferrer" aria-label={`Read ${paper.title}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={paper.image}
@@ -336,23 +316,19 @@ export default function Home() {
                     height="675"
                     loading="lazy"
                   />
+                  </a>
                   <div className="paper-venue">
-                    <div>
                       <span>{paper.venue}</span>
                       <strong>{paper.year}</strong>
-                    </div>
-                    <small>{paper.note}</small>
-                    <em>{String(index + 1).padStart(2, '0')}</em>
                   </div>
                 </div>
                 <div className="paper-content">
                   <h3>{paper.title}</h3>
-                  <p className="authors">{paper.authors}</p>
-                  <p>{paper.description}</p>
+                  <p className="authors">{paper.authors.split('Xukun Qin').map((part, index) => <span key={index}>{index > 0 && <strong>Xukun Qin</strong>}{part}</span>)}</p>
                   <div className="paper-links">
                     {paper.links.map((link) => (
                       <ExternalLink href={link.href} key={link.label}>
-                        {link.label} ↗
+                        {link.label}
                       </ExternalLink>
                     ))}
                   </div>
@@ -364,12 +340,8 @@ export default function Home() {
 
         <section className="section" id="work">
           <div className="section-heading sticky-heading">
-            <p>Projects</p>
-            <h2>Research systems</h2>
-            <p className="section-summary">
-              Research is most useful when ideas become inspectable systems,
-              repeatable experiments, and shared data.
-            </p>
+            <p>03 / PROJECTS</p>
+            <h2>Projects.</h2>
           </div>
           <div className="project-list">
             {projects.map((project) => (
@@ -387,7 +359,7 @@ export default function Home() {
                     ))}
                   </div>
                   {project.href ? (
-                    <ExternalLink href={project.href}>Explore project ↗</ExternalLink>
+                    <ExternalLink href={project.href}>View on GitHub</ExternalLink>
                   ) : null}
                 </div>
               </article>
@@ -397,8 +369,8 @@ export default function Home() {
 
         <section className="section" id="experience">
           <div className="section-heading">
-            <p>Background</p>
-            <h2>Research & experience</h2>
+            <p>04 / EXPERIENCE</p>
+            <h2>Experience.</h2>
           </div>
           <div className="timeline">
             {experience.map((item) => (
@@ -416,8 +388,8 @@ export default function Home() {
 
         <section className="section" id="education">
           <div className="section-heading">
-            <p>Education</p>
-            <h2>Academic path</h2>
+            <p>05 / EDUCATION</p>
+            <h2>Education.</h2>
           </div>
           <div className="education-list">
             {education.map((item) => (
@@ -436,7 +408,7 @@ export default function Home() {
         <section className="skills-section" aria-labelledby="skills-heading">
           <div>
             <p className="eyebrow">Toolbox</p>
-            <h2 id="skills-heading">Research foundations</h2>
+            <h2 id="skills-heading">Tools.</h2>
           </div>
           <div className="skills-list">
             {skills.map((skill) => (
@@ -445,25 +417,24 @@ export default function Home() {
           </div>
         </section>
 
+      </div>
         <section className="contact" id="contact">
+          <div className="page-shell contact-inner">
           <p className="eyebrow">Contact</p>
           <div>
-            <h2>Let&apos;s build agents that know where to look.</h2>
-            <p>
-              I am open to research conversations and collaborations around
-              embodied AI, active perception, world models, and autonomous
-              camera systems.
-            </p>
-          </div>
+            <h2>Let’s connect.</h2>
           <a className="contact-button" href="mailto:xukunqinwork@gmail.com">
-            xukunqinwork@gmail.com ↗
+            xukunqinwork@gmail.com
           </a>
+          </div>
+          </div>
         </section>
 
+      <div className="page-shell">
         <footer>
           <p>© 2026 Xukun Qin</p>
-          <p className="quote">“这个世界还是需要有人相信那些没用但重要的东西”</p>
-          <a href="#top">Back to top ↑</a>
+          <p className="quote" lang="zh-CN">“这个世界还是需要有人相信那些没用但重要的东西”</p>
+          <a href="#top">Back to top</a>
         </footer>
       </div>
     </main>

@@ -2,14 +2,15 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  icons: { icon: '/favicon.svg' },
   metadataBase: new URL('https://xkqin.github.io'),
   title: 'Xukun Qin · Embodied AI Researcher',
   description:
-    'Academic homepage of Xukun Qin, researching embodied AI, active perception, UAV vision-language navigation, and autonomous camera agents.',
+    'Xukun Qin at Shanghai AI Laboratory. AI, embodied intelligence, VLA, VLN, and world models.',
   openGraph: {
     title: 'Xukun Qin · Embodied AI Researcher',
     description:
-      'Embodied AI · Active Perception · Autonomous Camera Agents',
+      'Embodied AI · VLA / VLN · World Models',
     type: 'website',
     images: [
       {
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Xukun Qin · Embodied AI Researcher',
     description:
-      'Embodied AI · Active Perception · Autonomous Camera Agents',
+      'Embodied AI · VLA / VLN · World Models',
     images: ['/og.png'],
   },
 };
