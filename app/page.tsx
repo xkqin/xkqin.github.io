@@ -235,7 +235,7 @@ export default function Home() {
 
         <section className="hero" id="top" aria-labelledby="profile-name">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="hero-image" src="/research-paper-background.webp" alt="" aria-hidden="true" width="1200" height="630" fetchPriority="high" />
+          <img className="hero-image" src="/research-paper-background-wide.webp" alt="" aria-hidden="true" width="2172" height="724" fetchPriority="high" />
           <div className="hero-copy">
             <p className="eyebrow">SHANGHAI AI LABORATORY</p>
             <h1 id="profile-name">Xukun Qin</h1>
