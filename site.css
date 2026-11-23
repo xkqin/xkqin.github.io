@@ -67,6 +67,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .card dt { margin-bottom: 6px; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
 .card dd { font-size: 18px; line-height: 1.3; }
 .card dd i { font-style: normal; color: var(--ink-3); }
+/* "Currently": a green dot that keeps sending out a soft ring */
+.live { position: relative; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: #30c15b; vertical-align: 0; }
+.live::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: inherit; animation: live 2s ease-out infinite; }
+@keyframes live { to { transform: scale(3.4); opacity: 0; } }
 
 /* lede */
 .lede { padding: 110px 0 30px; }
@@ -150,7 +154,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 @media (max-width: 1000px) {
   .card { display: block; margin-top: 34px; border-bottom: 0; }
-  .card > div, .card > div + div { display: grid; grid-template-columns: 96px 1fr; align-items: baseline; padding: 11px 0; border-left: 0; border-bottom: 1px solid var(--rule); }
+  .card > div, .card > div + div { display: grid; grid-template-columns: 118px 1fr; align-items: baseline; padding: 11px 0; border-left: 0; border-bottom: 1px solid var(--rule); }
   .card dt { margin-bottom: 0; }
   .spread, .spread.flip { grid-template-columns: 1fr; gap: 30px; }
   .spread.flip .plate { order: 0; }
