@@ -111,6 +111,8 @@
   function P(x, y, z) { return [W * 0.52 + (x + z * 0.55) * s + ax * (10 + z * 1.6), H * 0.6 + (z * 0.42 - x * 0.1) * s - y * s * 0.9 + ay * (6 + z * 0.8)]; }
   function edge(x, z) { return (1 - Math.pow(Math.abs(x) / HX, 2.4)) * (1 - Math.pow(Math.abs(z) / HZ, 2.4)); }
   function path(u, t) { var x = -15 + 30 * u, z = 5.2 * Math.sin(u * 5 + 0.4) - 0.6; return [x, hgt(x, z, t) * 0.35 + 3.3 + 1.7 * Math.sin(Math.PI * u), z]; }
+  /* direction of travel at u; the two fixed cameras and the flying one all use it, so they coincide where they meet */
+  function heading(u, t) { var a = path(Math.max(0, u - 0.012), t), b = path(Math.min(1, u + 0.012), t); return [b[0] - a[0], b[1] - a[1], b[2] - a[2]]; }
   function dot(p, r) { ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, 6.2832); ctx.fill(); }
   function frustum(o, d, alpha) {                        /* a little wire camera at o, looking along d */
     var l = Math.hypot(d[0], d[1], d[2]) || 1, dx = d[0] / l, dy = d[1] / l, dz = d[2] / l;
@@ -164,21 +166,22 @@
     for (i = 0; i <= 96; i++) { var c = path(i / 96 * R, t), p = P(c[0], c[1], c[2]); if (i) ctx.lineTo(p[0], p[1]); else ctx.moveTo(p[0], p[1]); }
     ctx.stroke();
     nodes.forEach(function (n) { if (n.vis <= 0) return; ctx.globalAlpha = 0.18 * n.vis; dot(n.top, 8.5 * n.vis); ctx.globalAlpha = n.vis; dot(n.top, 3.6); });
-    frustum(path(0, t), [1, -0.2, 0.5], 0.75);
+    frustum(path(0, t), heading(0, t), 0.75);
     if (R >= 1) {
-      frustum(path(1, t), [-1, -0.25, -0.4], 0.75);
-      /* the camera in flight, with a short fading wake */
-      var uc = ((t - 3.2) * 0.07) % 1, o = path(uc, t), o2 = path(Math.min(1, uc + 0.012), t), po = P(o[0], o[1], o[2]);
-      for (i = 1; i < 14; i++) { var ut = uc - i * 0.008; if (ut < 0) break; var w = path(ut, t); ctx.globalAlpha = 0.45 * (1 - i / 14); dot(P(w[0], w[1], w[2]), 4.4 * (1 - i / 16)); }
-      ctx.globalAlpha = 0.22; dot(po, 13 + 3 * Math.sin(t * 4));
+      frustum(path(1, t), heading(1, t), 0.75);
+      /* the camera in flight, with a short fading wake: it leaves the first fixed camera, docks exactly on the last one, rests there, starts again */
+      var ph = ((t - 3.2) * 0.07) % 1.16, uc = Math.min(1, ph), o = path(uc, t), po = P(o[0], o[1], o[2]), docked = ph >= 1;
+      if (!docked) for (i = 1; i < 14; i++) { var ut = uc - i * 0.008; if (ut < 0) break; var w = path(ut, t); ctx.globalAlpha = 0.45 * (1 - i / 14); dot(P(w[0], w[1], w[2]), 4.4 * (1 - i / 16)); }
+      ctx.globalAlpha = docked ? 0.3 * (1 - (ph - 1) / 0.16) : 0.22; dot(po, docked ? 13 + 60 * (ph - 1) : 13 + 3 * Math.sin(t * 4));
       ctx.globalAlpha = 1; dot(po, 5.4);
-      frustum(o, [o2[0] - o[0], o2[1] - o[1], o2[2] - o[2]], 0.9);
+      frustum(o, heading(uc, t), 0.9);
     }
     ctx.globalAlpha = 1;
   }
   function loop(now) { frame(now); if (seen) raf = requestAnimationFrame(loop); }
   /* always paint one frame right away, so the drawing is there even where animation frames are paused (background tabs) */
   function kick() { cancelAnimationFrame(raf); frame(performance.now()); if (!still) raf = requestAnimationFrame(loop); }
+  cv._seek = function (sec) { t0 = performance.now() - sec * 1000; kick(); };   /* for checking a moment of the loop by hand */
   root.classList.add('fx-on');          /* first: this is what un-hides the canvas, and size() must measure it visible */
   colors(); size(); kick();
   addEventListener('resize', function () { size(); kick(); });
